@@ -1,5 +1,4 @@
-console.log(chalk.magenta('56. Асинхронність в дії з вивченням Node.js'));
-import chalk from 'chalk'
+console.log('56. Асинхронність в дії з вивченням Node.js');
 /*
  *
  * #1
@@ -36,11 +35,11 @@ import chalk from 'chalk'
 
 function asyncOperationDemo(callback) {
   try {
-    console.log(chalk.blue('Перший виклик'))
+    console.log('Перший виклик')
 
     process.nextTick(() => {
       try {
-        console.log(chalk.blue('Виконано: ') + chalk.magenta('nextTick'))
+        console.log('Виконано nextTick')
         callback('nextTick')
       } catch (error) {
         console.error(error)
@@ -49,7 +48,7 @@ function asyncOperationDemo(callback) {
 
     setImmediate(() => {
       try {
-        console.log(chalk.blue('Виконано: ') + chalk.magenta('setImmediate'))
+        console.log('Виконано setImmediate')
         callback('setImmediate')
       } catch (error) {
         console.error(error)
@@ -58,21 +57,21 @@ function asyncOperationDemo(callback) {
 
     setTimeout(() => {
       try {
-        console.log(chalk.blue('Виконано: ') + chalk.magenta('setTimeout'))
+        console.log('Виконано setTimeout')
         callback('setTimeout')
       } catch (error) {
         console.error(error)
       }
     }, 0)
 
-    console.log(chalk.blue('Останній виклик'))
+    console.log('Останній виклик')
   } catch (error) {
     console.error(error)
   }
 }
 
 asyncOperationDemo((operation) => {
-  console.log(chalk.blue('Завершено виконання: ') + chalk.magenta(operation))
+  console.log(`Завершено виконання: ${operation}`);
 })
 
 export { asyncOperationDemo }

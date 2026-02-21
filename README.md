@@ -1,4 +1,10 @@
-# Async Operation Demo (Node.js)
+# 56. Асинхронність в дії з вивченням Node.js
+
+## Запуск файлу
+![async-video](assets/images/async-video.gif)
+
+## Запуск тестів
+![async-test](assets/images/async-test.gif)
 
 ## Опис
 
